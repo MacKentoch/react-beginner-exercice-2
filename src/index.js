@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './index.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      wrote: ''
+      wrote: '',
     };
-
-    // ensure this binding here
   }
 
   render() {
@@ -23,11 +20,10 @@ class App extends Component {
 
           <input
             type="text"
-            value={/* wrote value from state */}
-            onChange={/* a callback to call each user key pressed (beware this binding) */}
+            value={/* state value here */}
+            onChange={/* a callback on user key pressed  */}
             placeholder="write something"
           />
-
         </div>
 
         <br />
@@ -35,14 +31,11 @@ class App extends Component {
         <div>
           <i>What you wrote in real time:</i>
 
-          <p className="recopy-text">{/* wrote value from state */}</p>
-          
+          <p className="recopy-text">{/* state value here */}</p>
         </div>
-
       </div>
     );
   }
 }
-
 
 render(<App />, document.getElementById('root'));
